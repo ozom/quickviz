@@ -1,0 +1,49 @@
+<div class="animated fadeIn">
+
+
+
+  <div class="row">
+
+
+    <div class="col-md-12" >
+      <div class="card">
+        <div class="card-header">
+          Kudowall
+        </div>
+        <div class="card-body">
+          <!-- <div class="row">
+              <div class="col-md-4">Start Date</div>
+              <div class="col-md-4">End Date</div>
+          </div>
+          <div class="row">
+              <div class="col-md-4">
+                  <my-date-picker name="start_date" [options]="myDatePickerOptions"
+                  [(ngModel)]="start_date" required></my-date-picker>
+              </div>
+              <div class="col-md-4">
+                  <my-date-picker name="end_date" [options]="myDatePickerOptions"
+                  [(ngModel)]="end_date" required></my-date-picker>
+              </div>
+              <div class="col-md-4">
+                  <button class="btn btn-block btn-primary" (click)="get_products()"> Refresh</button>
+              </div>
+          </div> -->
+
+          <div class="chart-wrapper">
+            <canvas baseChart  class="chart"
+            [datasets]="barChartData2"
+            [labels]="barChartLabels2"
+            [colors]="colors"
+            [options]="barChartOptions"
+            [legend]="barChartLegend"
+            [chartType]="barChartType"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)"></canvas>
+          </div>
+        </div>
+        </div>
+        </div>
+
+
+  </div><!--/.row-->
+</div>

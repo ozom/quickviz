@@ -137,6 +137,19 @@ r: 15,
   //"Plaignant": "DD",
   "Porteur" : "DSI"
   }
+},
+{
+x: 1,
+y: 2,
+r: 15,
+"comment": {"date" : "19/07/2018",
+  "libellé" : "Pas d'accès Tango pour la ressource DRPS détachée au pôle",
+  "Description" : "Le ressource DRPS détachée au pôle pour accompagner l'équipe OM dans les actions d'interfaçage avec la plateforme Tango n'a plus les accès depuis au arrivée. A noter qu'elle les avait avant son détanchement.",
+  //"Localisation" : "One roof",
+  //"Impact" : "Blocage",
+  //"Plaignant": "DD",
+  "Porteur" : "DRPS/DEX"
+  }
 }
 
 ],
@@ -156,21 +169,7 @@ r: 15,
     hoverBackgroundColor:'rgba(226, 113, 0, 0.9)'
   },
 {
-  data:[,{
-    x: '-4',
-    y: '-1',
-    r: 15,
-    "comment": {"date" : "07/07/2018",
-              "libellé" : "Assouplissement process ARQ pour le pôle",
-              "Description" : "Mode de fonctionnement et livrables ARQ à adapter avec les méthodes agiles (Phase documentaire assez long). Immersion ARQ prévue le 19/07 au One Roof",
-              //"Localisation" : "One roof",
-              //"Impact" : "Blocage",
-              //"Plaignant": "DD",
-              "Porteur" : "ARQ"
-            },
-
-
-  },
+  data:[,
   {
     x: '-1',
     y: '-1',

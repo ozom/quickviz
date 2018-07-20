@@ -2,14 +2,14 @@ import { NgModule } from '@angular/core';
 import { Routes,
      RouterModule } from '@angular/router';
 
-import { DashboardComponent } from './dashboard.component';
+import { MoodboardComponent } from './kudo.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: DashboardComponent,
+    component: MoodboardComponent,
     data: {
-      title: "Page d'accueil"
+      title: 'Staffing'
     }
   }
 ];
@@ -18,4 +18,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class DashboardRoutingModule {}
+export class MoodboardRoutingModule {}

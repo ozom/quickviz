@@ -8,7 +8,7 @@ const routes: Routes = [
     path: '',
     component: MobileComponent,
     data: {
-      title: 'Orange Money'
+      title: 'Vélocité'
     }
   }
 ];

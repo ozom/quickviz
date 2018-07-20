@@ -55,8 +55,12 @@ export const routes: Routes = [
         loadChildren: './views/base/base.module#BaseModule'
       },
       {
-        path: 'mobile',
-        loadChildren: './views/mobile/mobile.module#MobileModule'
+        path: 'velocite',
+        loadChildren: './views/velocité/mobile.module#MobileModule'
+      },
+      {
+        path: 'velocite-details',
+        loadChildren: './views/velocité2/mobile.module#MobileModule'
       },
       {
         path: 'omoi',
@@ -87,8 +91,20 @@ export const routes: Routes = [
         loadChildren: './views/moodboard/moodboard.module#MoodboardModule'
       },
       {
+        path: 'kudowall',
+        loadChildren: './views/kudowall/kudo.module#MoodboardModule'
+      },
+      {
+        path: 'staffing',
+        loadChildren: './views/staffing/kudo.module#MoodboardModule'
+      },
+      {
         path: 'pmoboard',
         loadChildren: './views/pmoboard/pmoboard.module#PmoboardModule'
+      },
+      {
+        path: 'epique',
+        loadChildren: './views/epique/epique.module#Pmoboard2Module'
       },
       {
         path: 'pmoboard-details',

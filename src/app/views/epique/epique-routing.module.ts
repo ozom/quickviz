@@ -2,14 +2,14 @@ import { NgModule } from '@angular/core';
 import { Routes,
      RouterModule } from '@angular/router';
 
-import { DashboardComponent } from './dashboard.component';
+import { Pmoboard2Component } from './epique.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: DashboardComponent,
+    component: Pmoboard2Component,
     data: {
-      title: "Page d'accueil"
+      title: 'Epique'
     }
   }
 ];
@@ -18,4 +18,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class DashboardRoutingModule {}
+export class EpiqueRoutingModule {}
