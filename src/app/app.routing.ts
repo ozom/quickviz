@@ -148,9 +148,9 @@ export const routes: Routes = [
       },
       {
         path: 'epicare',
-        loadChildren: './views/epiccare/epicare.module#EpicareModule'
+        loadChildren: './views/epicare/epicare.module#EpicareModule'
       },
-      {
+      { 
         path: 'coutbudgetcare',
         loadChildren: './views/coutbudgetcare/coutbudgetcare.module#CoutbudgetcareModule'
       },
