@@ -20,7 +20,7 @@ export class MobileComponent implements OnInit {
     this.router.navigate(['velocite-details']);
   }
 
-  public barChartLabels: string[] = ['Sprint 0'];
+  public barChartLabels: string[] = ['Sprint 0', 'Sprint 1'];
   public barChartType = 'bar';
   public barChartLegend = true;
   public colors = [
@@ -33,8 +33,8 @@ export class MobileComponent implements OnInit {
     },
     ];
   public barChartData: any[] = [
-    {data: [38], label: 'Engagement'},
-    {data: [13], label: 'Terminé'},
+    {data: [38, 19], label: 'Engagement'},
+    {data: [13, 11], label: 'Terminé'},
 
   ];
 

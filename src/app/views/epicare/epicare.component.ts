@@ -20,23 +20,39 @@ export class EpicareComponent  implements OnInit {
       //this.data.currentMessage.subscribe(message => this.datas = message)
       this.datas = [
         {
-          "EPIC": "Gestion point de vente",
+          "EPIC": "Inscription utilisateurs",
           "pourcentage": "0%",
         },
         {
-          "EPIC": "Gestion des tableaux de bord et des accès",
+          "EPIC": "Achat - transfert de crédit",
           "pourcentage": "0%",
         },
         {
-          "EPIC": "Gestion des commerciaux",
+          "EPIC": "Adminsitration",
           "pourcentage": "0%",
         },
         {
-          "EPIC": "Paramétrage de l'application",
+          "EPIC": "Gestion Flotte",
           "pourcentage": "0%",
         },
         {
-          "EPIC": "Suivi des KPIs de la distribution",
+          "EPIC": "Suivi Consomation",
+          "pourcentage": "0%",
+        },
+        {
+          "EPIC": "Facture",
+          "pourcentage": "0%",
+        },
+        {
+          "EPIC": "Analytics",
+          "pourcentage": "0%",
+        },
+        {
+          "EPIC": "Tableau de board",
+          "pourcentage": "0%",
+        },
+        {
+          "EPIC": "Autres services",
           "pourcentage": "0%",
         },
       ]

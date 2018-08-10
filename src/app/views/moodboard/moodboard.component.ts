@@ -98,7 +98,7 @@ public end_date: any = { date: { year: (new Date).getFullYear(), month: (new Dat
         this.show = true
     });
 }
-x
+
 get_products2(){
   var today_mili = (new Date).getTime();
   this.show = false
