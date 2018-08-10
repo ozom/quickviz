@@ -22,7 +22,7 @@ export class Pmoboard2Component  implements OnInit {
       this.datas = [
   {
     "EPIC": "Consultation Solde",
-    "pourcentage": "25%",
+    "pourcentage": "100%",
   },
   {
     "EPIC": "Connexion",
@@ -30,11 +30,11 @@ export class Pmoboard2Component  implements OnInit {
   },
  {
     "EPIC": "Transfert",
-    "pourcentage": "0%",
+    "pourcentage": "16%",
   },
   {
     "EPIC": "Exigences non fonctionnelles",
-    "pourcentage": "14%",
+    "pourcentage": "30.8%",
   },
   {
     "EPIC": "Achat Pass",
