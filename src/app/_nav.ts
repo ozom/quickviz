@@ -120,11 +120,6 @@ export const navItems = [
             url: '/usescasebm',
             icon: 'icon-speedometer',
           },
-          {
-            name: "Coûts & Budget",
-            url: '/coutbudgetbm',
-            icon: 'icon-speedometer',
-          },
         ]
       },
       {
@@ -139,6 +134,11 @@ export const navItems = [
             icon: 'icon-speedometer',
           },
         ]
+      },
+      {
+        name: "Coûts & Budget",
+        url: '/coutbudgetbm',
+        icon: 'icon-speedometer',
       },
     ]
   },
@@ -158,12 +158,12 @@ export const navItems = [
             url: '/epicare',
             icon: 'icon-speedometer',
           },
-          {
-            name: "Coûts & Budget",
-            url: '/coutbudgetcare',
-            icon: 'icon-speedometer',
-          },
         ]
+      },
+      {
+        name: "Coûts & Budget",
+        url: '/coutbudgetcare',
+        icon: 'icon-speedometer',
       },
     ]
   },
