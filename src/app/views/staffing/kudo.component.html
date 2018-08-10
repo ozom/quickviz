@@ -25,7 +25,7 @@
             <div class="col-md-4" >
                 <div class="card">
                   <div class="card-header">
-                    Care : 23 % (3 / 13)
+                    Care : 25 % (3 / 12)
                   </div>
                   <div class="card-body">
                     <div class="chart-wrapper" >
@@ -43,14 +43,14 @@
                   <div class="col-md-4" >
                       <div class="card">
                         <div class="card-header">
-                         Portail : 10% (1 / 7)
+                         Portail : 50% (3 / 6)
                         </div>
                         <div class="card-body">
                           <div class="chart-wrapper" >
                               <canvas baseChart
                               [data]="pieChartData2"
                               [labels]="pieChartLabels"
-                              [colors]="pieChartColors2"
+                              [colors]="pieChartColors3"
                               [chartType]="pieChartType"
                               (chartHover)="chartHovered($event)"
                               (chartClick)="chartClicked($event)"></canvas>
@@ -61,59 +61,80 @@
   </div><!--/.row-->
   <div class="row " >
 
-      <div class="col-md-4" >
-          <div class="card">
-            <div class="card-header">
-              Eshop : 0% (0 / 9)
+    <div class="col-md-4" >
+        <div class="card">
+          <div class="card-header">
+            Eshop : 0% (0 / 9)
+          </div>
+          <div class="card-body">
+            <div class="chart-wrapper" >
+                <canvas baseChart
+                [data]="pieChartData3"
+                [labels]="pieChartLabels"
+                [chartType]="pieChartType"
+                [colors]="pieChartColors"
+                (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)"></canvas>
             </div>
-            <div class="card-body">
-              <div class="chart-wrapper" >
-                  <canvas baseChart
-                  [data]="pieChartData3"
-                  [labels]="pieChartLabels"
-                  [chartType]="pieChartType"
-                  [colors]="pieChartColors"
-                  (chartHover)="chartHovered($event)"
-                  (chartClick)="chartClicked($event)"></canvas>
-              </div>
-            </div>
-            </div>
-            </div>
-            <div class="col-md-4" >
-                <div class="card">
-                  <div class="card-header">
-                    Digital Inside : 50% (1 / 2)
+          </div>
+          </div>
+          </div>
+          <div class="col-md-4" >
+              <div class="card">
+                <div class="card-header">
+                  Digital Inside : 50% (1 / 2)
+                </div>
+                <div class="card-body">
+                  <div class="chart-wrapper" >
+                      <canvas baseChart
+                      [data]="pieChartData4"
+                      [labels]="pieChartLabels"
+                      [chartType]="pieChartType"
+                      [colors]="pieChartColors3"
+                      (chartHover)="chartHovered($event)"
+                      (chartClick)="chartClicked($event)"></canvas>
                   </div>
-                  <div class="card-body">
-                    <div class="chart-wrapper" >
-                        <canvas baseChart
-                        [data]="pieChartData4"
-                        [labels]="pieChartLabels"
-                        [chartType]="pieChartType"
-                        [colors]="pieChartColors3"
-                        (chartHover)="chartHovered($event)"
-                        (chartClick)="chartClicked($event)"></canvas>
-                    </div>
-                  </div>
-                  </div>
-                  </div>
-                  <div class="col-md-4" >
-                      <div class="card">
-                        <div class="card-header">
-                          Analytics : 27% (9 / 33)
+                </div>
+                </div>
+                </div>
+                <div class="col-md-4" >
+                    <div class="card">
+                      <div class="card-header">
+                        Business Monitoring : 100% (8 / 8)
+                      </div>
+                      <div class="card-body">
+                        <div class="chart-wrapper" >
+                            <canvas baseChart
+                            [data]="pieChartData5"
+                            [labels]="pieChartLabels"
+                            [chartType]="pieChartType"
+                            [colors]="pieChartColors"
+                            (chartHover)="chartHovered($event)"
+                            (chartClick)="chartClicked($event)"></canvas>
                         </div>
-                        <div class="card-body">
-                          <div class="chart-wrapper" >
-                              <canvas baseChart
-                              [data]="pieChartData5"
-                              [labels]="pieChartLabels"
-                              [chartType]="pieChartType"
-                              [colors]="pieChartColors2"
-                              (chartHover)="chartHovered($event)"
-                              (chartClick)="chartClicked($event)"></canvas>
-                          </div>
-                        </div>
-                        </div>
-                        </div>
-  </div><!--/.row-->
+                      </div>
+                      </div>
+                      </div>
+</div><!--/.row-->
+<div class="row " >
+
+  <div class="col-md-4" >
+      <div class="card">
+        <div class="card-header">
+          CEM : 0%
+        </div>
+        <div class="card-body">
+          <div class="chart-wrapper" >
+              <canvas baseChart
+              [data]="pieChartData3"
+              [labels]="pieChartLabels"
+              [chartType]="pieChartType"
+              [colors]="pieChartColors"
+              (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)"></canvas>
+          </div>
+        </div>
+        </div>
+        </div>
+</div><!--/.row-->
 </div>
