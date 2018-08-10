@@ -25,11 +25,11 @@ export class CoutbudgetcareComponent implements OnInit {
   public barChartLegend = true;
   
 // Pie
-  public pieChartLabels:string[] = ['Scrum Master Sonatel', 'Product Owner Sonatel', 'Dev ATOS', 'Data Engineer ATOS', 'Integrateur ATOS', 'UI/UX Designer ATOS'];
-  public pieChartData:number[] = [1.5, 1.5, 7.4, 6.9, 1, 1.2];
+  public pieChartLabels:string[] = ['Product Owner Sonatel', 'Scrum Master IBM', 'Coach IBM', 'Dev IBM', 'Architecte Solution IBM', 'OPS IBM', 'Testeur IBM'];
+  public pieChartData:number[] = [1.5, 1.2, 0.7, 2.3, 1.5, 0, 0];
   public pieChartType:string = 'pie';
   public pieChartColors: Array < any > = [{
-    backgroundColor: ['#3B64AD', '#DF0000', '#E2AA00', '#62993E', '#FF6600', '#F1A78A', '#A352A3', '#AA7300'],
+    backgroundColor: ['#3B64AD', '#62993E', '#DF0000', '#E2AA00', '#FF6600', '#F1A78A', '#A352A3', '#AA7300'],
   }];
 
   public colors = [
@@ -45,8 +45,8 @@ export class CoutbudgetcareComponent implements OnInit {
   ];
 
   public barChartData: any[] = [
-    {'data' : [3] , 'label' : "SONATEL"},
-    {'data' : [16.6] , 'label' : "ATOS"},
+    {'data' : [1.5] , 'label' : "SONATEL"},
+    {'data' : [5.7] , 'label' : "IBM"},
   ];
 
   public barChartOptions: any = {

@@ -107,7 +107,8 @@ get_products2(){
   this.http.get('assets/data.json').subscribe((res)=>{
       //console.log(res);
       var raw_data = res["hits"]["hits"]
-      console.log(raw_data)
+      raw_data = raw_data.reverse()
+      console.log("raw data",raw_data)
       var data_tcolere = []
       var data_colere = []
       var data_neutre = []
@@ -177,8 +178,8 @@ legend: {
 
 
   ngOnInit(): void {
-    this.get_products()
-    //this.get_products2()
+    //this.get_products()
+    this.get_products2()
     console.log("test date", (new Date(""+this.start_date['date']['year'] + "/"+ this.start_date['date']['month']+"/"+this.start_date['date']['day'])).getTime())
   }
 
