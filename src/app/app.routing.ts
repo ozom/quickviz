@@ -79,6 +79,10 @@ export const routes: Routes = [
         loadChildren: './views/buttons/buttons.module#ButtonsModule'
       },
       {
+        path: 'coutom',
+        loadChildren: './views/coutom/coutom.module#CoutomModule'
+      },
+      {
         path: 'charts',
         loadChildren: './views/chartjs/chartjs.module#ChartJSModule'
       },
@@ -125,11 +129,35 @@ export const routes: Routes = [
       {
         path: 'widgets',
         loadChildren: './views/widgets/widgets.module#WidgetsModule'
-      }
+      },
+      {
+        path: 'churn',
+        loadChildren: './views/churn/churn.module#ChurnModule'
+      },
+      {
+        path: 'usescasebm',
+        loadChildren: './views/usescasebm/usescasebm.module#UsescasebmModule'
+      },
+      {
+        path: 'coutbudgetbm',
+        loadChildren: './views/coutbudgetbm/coutbudgetbm.module#CoutbudgetbmModule'
+      },
+      {
+        path: 'epicbm',
+        loadChildren: './views/epicbm/epicbm.module#EpicbmModule'
+      },
+      {
+        path: 'epicare',
+        loadChildren: './views/epiccare/epicare.module#EpicareModule'
+      },
+      {
+        path: 'coutbudgetcare',
+        loadChildren: './views/coutbudgetcare/coutbudgetcare.module#CoutbudgetcareModule'
+      },
     ]
   }
 ];
-
+ 
 @NgModule({
   imports: [ RouterModule.forRoot(routes) ],
   exports: [ RouterModule ]

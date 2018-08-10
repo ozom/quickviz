@@ -1,0 +1,65 @@
+<div class="animated fadeIn">
+
+
+  <!--/.card-->
+ 
+  <div class="row">
+
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+
+          <div class="card">
+            <div class="card-header">
+              Charges financières par mois (Millions CFA)
+            </div>
+            <div class="card-body">
+
+              <div class="chart-wrapper">
+                <canvas baseChart class="chart"
+                [datasets]="barChartData"
+                [labels]="barChartLabels"
+                [colors]="colors"
+                [options]="barChartOptions"
+                [legend]="barChartLegend"
+                [chartType]="barChartType"
+                (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)"></canvas>
+              </div>
+
+            </div>
+
+          </div>
+            
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+
+          <div class="card">
+            <div class="card-header">
+              Répartition des charges financières par type de ressource (Millions CFA)
+            </div>
+            <div class="card-body">
+              <div class="chart-wrapper" >
+                  <canvas baseChart
+                  [data]="pieChartData"
+                  [labels]="pieChartLabels"
+                  [colors]="pieChartColors"
+                  [chartType]="pieChartType"
+                  (chartHover)="chartHovered($event)"
+                  (chartClick)="chartClicked($event)"></canvas>
+              </div>
+            </div>
+
+          </div>
+            
+        </div>
+      </div>
+    </div>
+
+  </div><!--/.row-->
+</div>

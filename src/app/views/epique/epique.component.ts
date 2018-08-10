@@ -28,21 +28,13 @@ export class Pmoboard2Component  implements OnInit {
     "EPIC": "Connexion",
     "pourcentage": "0%",
   },
-  {
-    "EPIC": "Rituels scrum",
-    "pourcentage": "0%",
-  },
-  {
+ {
     "EPIC": "Transfert",
     "pourcentage": "0%",
   },
   {
-    "EPIC": "exigences non fonctionnelles",
+    "EPIC": "Exigences non fonctionnelles",
     "pourcentage": "14%",
-  },
-  {
-    "EPIC": "Paiement de Factures",
-    "pourcentage": "0%",
   },
   {
     "EPIC": "Achat Pass",
@@ -85,15 +77,15 @@ export class Pmoboard2Component  implements OnInit {
     "pourcentage": "0%",
   },
   {
-    "EPIC": "Dons",
+    "EPIC": "Dons & Cotisations",
     "pourcentage": "0%",
   },
   {
-    "EPIC": "Vocal",
+    "EPIC": "Vocalisation des opérations",
     "pourcentage": "0%",
   },
   {
-    "EPIC": "Invitations",
+    "EPIC": "Invitation d'un ami à télécharger l'application",
     "pourcentage": "0%",
   },
   {
@@ -101,27 +93,27 @@ export class Pmoboard2Component  implements OnInit {
     "pourcentage": "0%",
   },
   {
-    "EPIC": "SDE",
+    "EPIC": "Facture SDE",
     "pourcentage": "0%",
   },
   {
-    "EPIC": "SONATEL",
+    "EPIC": "Facture SONATEL",
     "pourcentage": "0%",
   },
   {
-    "EPIC": "Woyofal",
+    "EPIC": "Facture Woyofal",
     "pourcentage": "0%",
   },
   {
-    "EPIC": "Canal+",
+    "EPIC": "Facture Canal+",
     "pourcentage": "0%",
   },
   {
-    "EPIC": "Rapido",
+    "EPIC": "Facture Rapido",
     "pourcentage": "0%",
   },
   {
-    "EPIC": "Senelec",
+    "EPIC": "Facture Senelec",
     "pourcentage": "0%",
   },
   {

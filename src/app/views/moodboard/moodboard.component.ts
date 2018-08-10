@@ -98,6 +98,39 @@ public end_date: any = { date: { year: (new Date).getFullYear(), month: (new Dat
         this.show = true
     });
 }
+x
+get_products2(){
+  var today_mili = (new Date).getTime();
+  this.show = false
+  this.barChartData2 = []
+  this.barChartLabels2 = []
+  this.http.get('assets/data.json').subscribe((res)=>{
+      //console.log(res);
+      var raw_data = res["hits"]["hits"]
+      console.log(raw_data)
+      var data_tcolere = []
+      var data_colere = []
+      var data_neutre = []
+      var data_heureux = []
+      var data_theureux = []
+      raw_data.forEach(element => {
+        this.barChartLabels2.push(element["_source"]["Date"])
+        data_tcolere.push(element["_source"]["tres en colere"]);
+        data_colere.push(element["_source"]["colere"]);
+        data_neutre.push(element["_source"]["neutre"]);
+        data_heureux.push(element["_source"]["heureux"]);
+        data_theureux.push(element["_source"]["tres heureux"]);
+      });
+      this.barChartData2.push({"data" : data_tcolere, 'label': 'Très en colère '})
+      this.barChartData2.push({"data" : data_colere, 'label': 'Colère '})
+      this.barChartData2.push({"data" : data_neutre, 'label': 'Neutre '})
+      this.barChartData2.push({"data" : data_heureux, 'label': 'Heureux '})
+      this.barChartData2.push({"data" : data_theureux, 'label': 'Trés Heureux '})
+      console.log(this.barChartLabels2)
+      console.log(this.barChartData2)
+      this.show = true
+  });
+}
 
 
   //bar chart
@@ -131,7 +164,7 @@ public end_date: any = { date: { year: (new Date).getFullYear(), month: (new Dat
 },
 maintainAspectRatio: false,
 legend: {
-  display: false
+  display: true
 },
     scaleShowVerticalLines: false,
     responsive: true
@@ -145,6 +178,7 @@ legend: {
 
   ngOnInit(): void {
     this.get_products()
+    //this.get_products2()
     console.log("test date", (new Date(""+this.start_date['date']['year'] + "/"+ this.start_date['date']['month']+"/"+this.start_date['date']['day'])).getTime())
   }
 

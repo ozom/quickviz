@@ -87,38 +87,12 @@ export class PmoboardComponent  implements OnInit {
   public ChartData:any[] = [
     {data:[
       , {
-  x: 4,
-  y: 1,
+  x: 4.5,
+  y: 4,
   r: 15,
   "comment": {"date" : "04/07/2018",
         "libellé" : "Sécurisation du plan de staffing IBM & ATOS",
-        "Description" : "Plan de staffing global IBM & ATOS pas encore effectif sauf pour le selfcare B2B (prévue le 09/07) Orange Money (ok).",
-        //"Localisation" : "One roof",
-        //"Impact" : "Blocage",
-        //"Plaignant": "DD",
-        "Porteur" : "DSI"
-        }
-},
-{
-  x: 2,
-  y: 3,
-  r: 15,
-  "comment": {"date" : "12/07/2018",
-        "libellé" : "Mise à disposition des ressources au One Roof (OPS)",
-        "Description" : "Selon les discussions avec la DSI, la disponibilité de l'exploitant (OPS) n'est pas garantie",
-        //"Localisation" : "One roof",
-        //"Impact" : "Blocage",
-        //"Plaignant": "DD",
-        "Porteur" : "DSI"
-        }
-},
-{
-  x: 4,
-  y: 4,
-  r: 15,
-  "comment": {"date" : "12/07/2018",
-        "libellé" : "Les SLA de la DSI sont trops longs",
-        "Description" : "Sur le point d'inter-fonctionnement DSI/DD, les SLA proposés par DSI sont trop longs.",
+        "Description" : " Le plan staffing global IBM est bloqué. <br><br> Options proposées <br><br> Scénario 1 : Big bang <br> • On prend comme base le modèle de delivery agile IBM notamment sur le coaching agile et design thinking pour tous les plateaux (tous produits confondus, un seul modèle). <br> • On va chercher le meilleur des profils de développeurs chez IBM Ou Atos. <br>• On remet à plat la logique de feature team par fournisseur, nous composons la meilleure feature team au meilleur coût. <br>• Sonatel pilote la création de valeur, (une RH non productive est libérée) <br><br> Scénario 2 : <br> • Soit accepter le plan de staffing à date d’IBM qui inclut certes des locaux pour un démarrage effectif (comme IBM est « sensé » être responsable de la création de valeur) <br><br> Scénario 3:<br> • Soit accepter/assumer de retarder la roadmap de transformation digitale et repartir sur la négociation contractuelle avec IBM.",
         //"Localisation" : "One roof",
         //"Impact" : "Blocage",
         //"Plaignant": "DD",
@@ -130,8 +104,8 @@ x: 4,
 y: 1,
 r: 15,
 "comment": {"date" : "04/07/2018",
-  "libellé" : "Selfcare B2C : disponibilité RH",
-  "Description" : "Projet gelé. En attente du retour du contributeur backend (malade).  ",
+  "libellé" : "Selfcare B2C : Instabilité de la plateforme",
+  "Description" : "Depuis le 08/03 on arrive pas à deployer en production. <br><br> Cause : Instabilité backend (web services)",
   //"Localisation" : "One roof",
   //"Impact" : "Blocage",
   //"Plaignant": "DD",
@@ -139,12 +113,38 @@ r: 15,
   }
 },
 {
+  x: 2,
+  y: 3,
+  r: 15,
+  "comment": {"date" : "12/07/2018",
+        "libellé" : "Mise à disposition des ressources sur OM au One Roof (OPS)",
+        "Description" : "Selon les discussions avec la DSI, la disponibilité de l'exploitant (OPS)  Gora Diarra n'est pas garantie.",
+        //"Localisation" : "One roof",
+        //"Impact" : "Blocage",
+        //"Plaignant": "DD",
+        "Porteur" : "DSI"
+        }
+},
+{
+  x: 3,
+  y: 2,
+  r: 15,
+  "comment": {"date" : "12/07/2018",
+        "libellé" : "Les SLA de la DSI sont trops longs",
+        "Description" : "Sur le point d'inter-fonctionnement DSI/DD, les SLA proposés par DSI sont trop longs.",
+        //"Localisation" : "One roof",
+        //"Impact" : "Blocage",
+        //"Plaignant": "DD",
+        "Porteur" : "DSI"
+        }
+},
+{
 x: 1,
 y: 2,
 r: 15,
 "comment": {"date" : "19/07/2018",
   "libellé" : "Pas d'accès Tango pour la ressource DRPS détachée au pôle",
-  "Description" : "Le ressource DRPS détachée au pôle pour accompagner l'équipe OM dans les actions d'interfaçage avec la plateforme Tango n'a plus les accès depuis au arrivée. A noter qu'elle les avait avant son détanchement.",
+  "Description" : "Le ressource DRPS détachée au pôle pour accompagner l'équipe OM dans les actions d'interfaçage avec la plateforme Tango n'a plus les accès depuis son arrivée. A noter qu'elle les avait avant son détachement.",
   //"Localisation" : "One roof",
   //"Impact" : "Blocage",
   //"Plaignant": "DD",

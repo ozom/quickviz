@@ -32,12 +32,12 @@ public end_date: any = { date: { year: (new Date).getFullYear(), month: (new Dat
 
   // lineChart1
   public barChartData2: any[] = [
-    {'data' : [14,8] , 'label' : "Merci beaucoup"},
-    {'data' : [1,1] , 'label' : "Tres heureux"},
-    {'data' : [1,0] , 'label' : "Bien joué"},
-    {'data' : [3,3] , 'label' : "Félicitation"},
-    {'data' : [4,5] , 'label' : "Excellent travail"},
-    {'data' : [2,0] , 'label' : "Extraordinaire"},
+    {'data' : [14,8,11] , 'label' : "Merci beaucoup"},
+    {'data' : [1,1,3] , 'label' : "Tres heureux"},
+    {'data' : [1,0,3] , 'label' : "Bien joué"},
+    {'data' : [3,3,5] , 'label' : "Félicitation"},
+    {'data' : [4,5,9] , 'label' : "Excellent travail"},
+    {'data' : [2,0,5] , 'label' : "Extraordinaire"},
   ]
   public  show = false 
   get_products(){
@@ -141,12 +141,12 @@ public end_date: any = { date: { year: (new Date).getFullYear(), month: (new Dat
 },
 maintainAspectRatio: false,
 legend: {
-  display: false
+  display: true
 },
     scaleShowVerticalLines: false,
     responsive: true
   };
-  public barChartLabels2: string[] = ["Mai 2018", "Juin 2018"];
+  public barChartLabels2: string[] = ["Mai 2018", "Juin 2018", "Juillet 2018"];
   
   public barChartType = 'bar';
   public barChartLegend = true;

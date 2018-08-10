@@ -32,11 +32,11 @@ public end_date: any = { date: { year: (new Date).getFullYear(), month: (new Dat
  // Pie
  public pieChartLabels:string[] = [];
  public pieChartData:number[] = [100, 0];
- public pieChartData1:number[] = [10, 90];
- public pieChartData2:number[] = [10, 90];
+ public pieChartData1:number[] = [23, 67];
+ public pieChartData2:number[] = [14.3, 85.7];
  public pieChartData3:number[] = [0, 100];
- public pieChartData4:number[] = [60, 40];
- public pieChartData5:number[] = [40, 60];
+ public pieChartData4:number[] = [50, 50];
+ public pieChartData5:number[] = [27, 73];
  public pieChartType:string = 'pie';
 
  public pieChartColors: Array < any > = [{

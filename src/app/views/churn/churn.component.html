@@ -1,0 +1,289 @@
+<div class="animated fadeIn">
+
+  <div class="row ">
+    <div class="col-md-12" >
+        <div class="card">
+          <div class="card-header">
+        <H3>Objectif de ce tableau de bord</H3> 
+        Partant des données du mois de mai 2018, l'étude sur le churn recharge permettra de déterminer le pourcentage de clients à risque par segment. Plusieurs segmentations sont effectuées pour analyser ces données sous plusieurs angles.
+        <br>
+        <b>CHURN RECHARGE</b> = client n'ayant pas généré de CA (effectué de recharge) durant un mois
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="row ">
+    <div class="col-md-12" >
+        <div class="card">
+          <div class="card-header">
+        <H5>SEGMENTATION FIDELITE & VALEUR</H5> 
+       La segmentation RFM est basée sur la <b>Récence</b>, <b>Fréquence</b> et <b>Montant</b> sur une activité de 3 mois.
+        <br>-     On peut remarquer que les Très bons clients sont 12% et font 47% du CA, ils ont un ARPU moyen par mois de 15 150 FCFA
+        <br>-     En opposition avec les très faible clients 23% des clients et font 2% de CA avec un ARPU moyen de 400F
+        <br>-     1,7% des Très Bon Clients ont churné (c’est-à-dire dire pas de recharge en CA le mois d’après calcul) contrairement à 19% de churn sur les Faible
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="row ">
+
+      <div class="col-md-6" >
+          <div class="card">
+            <div class="card-header">
+              Ségmentation RFM (% sur le parc global)
+            </div>
+            <div class="card-body">
+              <div class="chart-wrapper" >
+                  <canvas baseChart
+                  [data]="pieChartDataParcRFM"
+                  [labels]="pieChartLabelsRFM"
+                  [colors]="pieChartColors"
+                  [chartType]="pieChartType"
+                  (chartHover)="chartHovered($event)"
+                  (chartClick)="chartClicked($event)"></canvas>
+              </div>
+            </div>
+            </div>
+            </div>
+            <div class="col-md-6" >
+              <div class="card">
+                <div class="card-header">
+                  Impact CA par segment (% sur la CA global)
+                </div>
+                <div class="card-body">
+                  <div class="chart-wrapper" >
+                      <canvas baseChart
+                      [data]="pieChartDataCaRFM"
+                      [colors]="pieChartColors"
+                      [labels]="pieChartLabelsRFM"
+                      [chartType]="pieChartType"
+                      (chartHover)="chartHovered($event)"
+                      (chartClick)="chartClicked($event)"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+  </div><!--/.row-->
+  <div class="row ">
+    <div class="col-md-12" >
+        <div class="card">
+          <div class="card-header">
+        <H5>SEGMENTATION SOCIALE</H5> 
+        La segmentation sociale est basée sur le niveau d’interaction fréquente avec un cercle social au cours du mois de mai 2018. Les segments suivants ont été définis :
+        <br>-       INFLUENCEUR_STAR : > 25 contacts fréquents
+        <br>-       INFLUENCEUR_VIP : entre 10 à 25 contacts fréquents
+        <br>-       INFLUENCEUR_LEADER : entre 5 à 10 personnes fréquents
+        <br>-       INFLUENCEUR_SIMPLE : entre 1 à 5 personnes fréquents 
+        <br>-       FOLLOWERS : 0 contact fréquent
+        <br>La segmentation est plutôt comportementale, donc très stable d’un mois à l’autre.
+        <br>Les STARS et les VIP font 10% des clients et génère 34% du CA et ont des ARPU respectifs de 23 000F et de 10 000F.  1% de ces clients font un churn le mois d’après.
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="row ">
+
+      <div class="col-md-6" >
+          <div class="card">
+            <div class="card-header">
+              Ségmentation Sociale (% sur le parc global)
+            </div>
+            <div class="card-body">
+              <div class="chart-wrapper" >
+                  <canvas baseChart
+                  [data]="pieChartData1"
+                  [labels]="pieChartLabels"
+                  [colors]="pieChartColors"
+                  [chartType]="pieChartType"
+                  (chartHover)="chartHovered($event)"
+                  (chartClick)="chartClicked($event)"></canvas>
+              </div>
+            </div>
+            </div>
+            </div>
+            <div class="col-md-6" >
+              <div class="card">
+                <div class="card-header">
+                  Impact CA par segment (% sur la CA global)
+                </div>
+                <div class="card-body">
+                  <div class="chart-wrapper" >
+                      <canvas baseChart
+                      [data]="pieChartData2"
+                      [colors]="pieChartColors"
+                      [labels]="pieChartLabels"
+                      [chartType]="pieChartType"
+                      (chartHover)="chartHovered($event)"
+                      (chartClick)="chartClicked($event)"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12" >
+              <div class="card">
+                <div class="card-header">
+                  Risque churn par segment 
+                </div>
+                <div class="card-body">
+
+                  <table class="table table-responsive-sm table-hover table-outline mb-0">
+                    <thead class="thead-light">
+                      <tr>
+                        <th>Segment</th>
+                        <th>ARPU (FCFA)</th>
+                        <th>% risque churn sur le segment</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let el of datas">
+                        <td>
+                          <div>{{el["name"]}}</div>          
+                        </td>
+                        <td>
+                          <div>{{el["arpu"]}} </div>
+                        </td>
+                        <td>
+                          <div>{{el["churn"]}} </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                </div>
+              </div>
+            </div>
+  </div><!--/.row-->
+  <div class="row ">
+    <div class="col-md-12" >
+        <div class="card">
+          <div class="card-header">
+        <H3>MULTI SIM :</H3> 
+        La segmentation du parc selon le nombre de SIMs détenus.
+        <br>Les Momo SIM churne deux fois plus vite que les Multi SIM
+          </div>
+        </div>
+    </div>
+  </div><!--/.row-->
+  <div class="row ">
+
+      <div class="col-md-6" >
+          <div class="card">
+            <div class="card-header">
+              Ségmentation Parc (% parc sur le parc global)
+            </div>
+            <div class="card-body">
+              <div class="chart-wrapper" >
+                  <canvas baseChart
+                  [data]="pieChartDataSim"
+                  [labels]="pieChartLabelSim"
+                  [colors]="pieChartColors"
+                  [chartType]="pieChartType"
+                  (chartHover)="chartHovered($event)"
+                  (chartClick)="chartClicked($event)"></canvas>
+              </div>
+            </div>
+            </div>
+            </div>
+            <div class="col-md-6" >
+              <div class="card">
+                <div class="card-header">
+                  Risque churn par segment
+                </div>
+                <div class="card-body">
+
+                  <table class="table table-responsive-sm table-hover table-outline mb-0">
+                    <thead class="thead-light">
+                      <tr>
+                        <th>Segment</th>
+                        <th>ARPU (FCFA)</th>
+                        <th>% risque churn sur le segment</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let el of datasim">
+                        <td>
+                          <div>{{el["name"]}}</div>          
+                        </td>
+                        <td>
+                          <div>{{el["arpu"]}} </div>
+                        </td>
+                        <td>
+                          <div>{{el["churn"]}} </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                </div>
+              </div>
+            </div>
+  </div><!--/.row-->
+  <div class="row ">
+    <div class="col-md-12" >
+        <div class="card">
+          <div class="card-header">
+        <H3>ORANGE MONEY :</H3> 
+        25% du parc global ont utilisé OM sur la mois de mai 2018. Les utilisateurs OM ont 3 fois moins de chance de churner donc OM est un bon levier de rétention client. 
+          </div>
+        </div>
+    </div>
+  </div><!--/.row-->
+  <div class="row ">
+
+      <div class="col-md-6" >
+          <div class="card">
+            <div class="card-header">
+              Ségmentation Parc (% sur le parc global)
+            </div>
+            <div class="card-body">
+              <div class="chart-wrapper" >
+                  <canvas baseChart
+                  [data]="pieChartDataOM"
+                  [labels]="pieChartLabelOM"
+                  [colors]="pieChartColors"
+                  [chartType]="pieChartType"
+                  (chartHover)="chartHovered($event)"
+                  (chartClick)="chartClicked($event)"></canvas>
+              </div>
+            </div>
+            </div>
+            </div>
+            <div class="col-md-6" >
+              <div class="card">
+                <div class="card-header">
+                  Risque churn par segment
+                </div>
+                <div class="card-body">
+
+                  <table class="table table-responsive-sm table-hover table-outline mb-0">
+                    <thead class="thead-light">
+                      <tr>
+                        <th>Segment</th>
+                        <th>ARPU (FCFA)</th>
+                        <th>% risque churn sur le segment</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let el of dataom">
+                        <td>
+                          <div>{{el["name"]}}</div>          
+                        </td>
+                        <td>
+                          <div>{{el["arpu"]}} </div>
+                        </td>
+                        <td>
+                          <div>{{el["churn"]}} </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                </div>
+              </div>
+            </div>
+  </div><!--/.row-->
+
+</div>
