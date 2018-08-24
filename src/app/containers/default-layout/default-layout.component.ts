@@ -1,4 +1,7 @@
-import { Component, Input } from '@angular/core';
+import {LOCAL_STORAGE, WebStorageService} from 'angular-webstorage-service';
+import { Injectable } from '@angular/core';
+import { Component, OnInit , Inject } from '@angular/core';
+import { Router, CanActivate } from '@angular/router';
 import { navItems } from './../../_nav';
 
 @Component({
@@ -10,7 +13,7 @@ export class DefaultLayoutComponent {
   public sidebarMinimized = true;
   private changes: MutationObserver;
   public element: HTMLElement = document.body;
-  constructor() {
+  constructor(@Inject(LOCAL_STORAGE) private storage: WebStorageService, public router: Router) {
 
     this.changes = new MutationObserver((mutations) => {
       this.sidebarMinimized = document.body.classList.contains('sidebar-minimized')
@@ -20,4 +23,10 @@ export class DefaultLayoutComponent {
       attributes: true
     });
   }
+
+  public logout(){
+        this.storage.set("logged", false);
+        //this.router.navigate(['login']);
+      }
+
 }

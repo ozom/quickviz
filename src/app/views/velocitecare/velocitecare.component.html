@@ -1,0 +1,43 @@
+<div class="animated fadeIn">
+
+
+  <!--/.card-->
+ 
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+         La vélocité d'une équipe représente sa capacité de production (exprimé en points) durant un sprint.<br />
+          Il s'agit d’un indicateur qui a pour but d'aider l'équipe de développement lors des séances de planification de sprint (« Sprint Planning ») à évaluer la quantité de travail qu'elle peut sélectionner pour le sprint. Cet indicateur peut être utilisé par le Product Owner pour l'aider à planifier les livraisons.
+          <br><br>STAFFING du Plateau : <b>IBM</b>
+        </div>
+        <div class="card-body">
+
+          <div class="card">
+            <div class="card-header">
+              Vélocité equipe
+            </div>
+            <div class="card-body">
+
+              <div class="chart-wrapper">
+                <canvas baseChart class="chart"
+                [datasets]="barChartData"
+                [labels]="barChartLabels"
+                [colors]="colors"
+                [legend]="barChartLegend"
+                [chartType]="barChartType"
+                (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)"></canvas>
+              </div>
+
+            </div>
+
+          </div>
+            
+        </div>
+      </div>
+    </div>
+
+
+  </div><!--/.row-->
+</div>

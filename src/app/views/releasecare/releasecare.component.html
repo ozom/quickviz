@@ -1,0 +1,28 @@
+<div class="animated fadeIn">
+
+
+
+  <div class="row">
+
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          Le plan de release présente le découpage des différentes livraisons en groupe de fonctionnalités. Des dates prévisionnelles de livraison seront présentées une fois la vélocité de l'équipe maîtrisée. Cette maîtrise parvient généralement au bout de 3 sprints.
+        </div>
+        <div class="card-body">
+
+          <table class="table table-responsive-sm table-hover table-outline mb-0">
+            <tbody>
+              <tr class="thead-light" *ngFor="let el of datas">
+                <th class="align-center"><div><img src="./assets/{{el['IMAGE']}}" alt=""><br>{{el["TYPE"]}}</div></th>
+                <td class="border-on" *ngFor="let elmt of el['DATAS']"><div [innerHTML]="elmt['LIB']"></div></td>
+              </tr> 
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div><!--/.col-->
+
+
+  </div><!--/.row-->
+</div>

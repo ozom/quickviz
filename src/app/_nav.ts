@@ -42,8 +42,21 @@ export const navItems = [
   //
   // },
   {
+    name: 'KPIs STRATEGIQUES',
+    url: 'STRATEGIE',
+    children:
+    [
+      {
+        name: 'CA Digital',
+        url: '/cadigital',
+        icon: 'icon-speedometer',
+
+      },
+    ]
+  },
+  {
     name: 'PMO',
-    url: '',
+    url: 'PMO',
     children:
     [
       {
@@ -74,7 +87,7 @@ export const navItems = [
   },
   {
     name: 'Orange Money',
-    url: '',
+    url: 'orange',
     children:
     [
       {
@@ -84,7 +97,7 @@ export const navItems = [
         children:
         [
           {
-              name: 'Velocité',
+              name: 'Velocite',
               url: '/velocite',
               icon: 'icon-speedometer',
 
@@ -94,46 +107,35 @@ export const navItems = [
               url: '/epique',
               icon: 'icon-speedometer',
 
-            }
-        ]
+            },
+            {
+              name: "Plan de release",
+              url: '/releaseom',
+              icon: 'icon-speedometer',
+            },
+          ]
       },
       {
         name: 'Coûts & Budget',
         url: '/coutom',
         icon: 'icon-speedometer',
-      }  
+     }  
     ]
   },
   {
     name: 'Business Monitoring',
-    url: '',
+    url: 'business',
     children:
     [
       {
-        name: 'MARKETING',
-        url: '',
-        icon: 'icon-arrow-right',
-        children:
-        [
-          {
-            name: "Uses Case",
-            url: '/usescasebm',
-            icon: 'icon-speedometer',
-          },
-        ]
+        name: "Uses Case Marketing",
+        url: '/usescasebm',
+        icon: 'icon-speedometer',
       },
       {
-        name: 'DISTRIBUTION',
-        url: '',
-        icon: 'icon-arrow-right',
-        children:
-        [
-          {
-            name: "Epic",
-            url: '/epicbm',
-            icon: 'icon-speedometer',
-          },
-        ]
+        name: "Epic Distribution",
+        url: '/epicbm',
+        icon: 'icon-speedometer',
       },
       {
         name: "Coûts & Budget",
@@ -144,7 +146,7 @@ export const navItems = [
   },
   {
     name: 'Care',
-    url: '',
+    url: 'care',
     children:
     [
       {
@@ -154,8 +156,18 @@ export const navItems = [
         children:
         [
           {
+            name: "Vélocité",
+            url: '/velocitecare',
+            icon: 'icon-speedometer',
+          },
+          {
             name: "Epic",
             url: '/epicare',
+            icon: 'icon-speedometer',
+          },
+          {
+            name: "Plan de release",
+            url: '/releasecare',
             icon: 'icon-speedometer',
           },
         ]
@@ -168,8 +180,8 @@ export const navItems = [
     ]
   },
   {
-    name: 'Data Science',
-    url: '',
+    name: 'Quick Wins Data Science',
+    url: '/churn',
     children:
     [
       {

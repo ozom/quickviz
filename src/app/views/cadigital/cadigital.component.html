@@ -1,0 +1,204 @@
+<div class="animated fadeIn">
+  <div class="row" >
+    <div class="col-sm-6 col-lg-3">
+      <div class="card text-white bg-pink">
+        <div class="card-body pb-0">
+          <!--
+          <div class="btn-group float-right" dropdown>
+            <button type="button" class="btn btn-transparent dropdown-toggle p-0" dropdownToggle>
+              <i class="icon-settings"></i>
+            </button>
+            <div class="dropdown-menu dropdown-menu-right" *dropdownMenu>
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </div>
+          -->
+          <div class="kpi-text-value">264 331</div>
+          <div>CA opérationnel global (Millions)<br>&nbsp;</div>
+          <div>JUILLET 2018</div>
+        </div>
+        <!--
+        <div class="chart-wrapper mt-3 mx-3" style="height:70px;">
+          <canvas baseChart class="chart"
+          [datasets]="lineChart1Data"
+          [labels]="lineChart1Labels"
+          [options]="lineChart1Options"
+          [colors]="lineChart1Colours"
+          [legend]="lineChart1Legend"
+          [chartType]="lineChart1Type"></canvas>
+        </div>-->
+      </div>
+    </div><!--/.col-->
+    <div class="col-sm-6 col-lg-3">
+      <div class="card text-white bg-yellow">
+        <div class="card-body pb-0">
+          <!--
+          <button type="button" class="btn btn-transparent p-0 float-right">
+            <i class="icon-location-pin"></i>
+          </button>-->
+          <div class="kpi-text-value">58 069 (22%)</div>
+          <div>CA Digital (Millions)<br>&nbsp;</div>
+          <div>JUILLET 2018</div>
+        </div>
+        <!--
+        <div class="chart-wrapper mt-3 mx-3" style="height:70px;">
+          <canvas baseChart class="chart"
+          [datasets]="lineChart2Data"
+          [labels]="lineChart2Labels"
+          [options]="lineChart2Options"
+          [colors]="lineChart2Colours"
+          [legend]="lineChart2Legend"
+          [chartType]="lineChart2Type"></canvas>
+        </div>-->
+      </div>
+    </div><!--/.col-->
+    <div class="col-sm-6 col-lg-3">
+      <div class="card text-white bg-green">
+        <div class="card-body pb-0">
+            <div class="kpi-text-value">42 343 (16%)</div>
+            <div>CA Digital sans OM (Millions)<br>&nbsp;</div>
+            <div>JUILLET 2018</div>
+          </div>
+        <!--
+        <div class="chart-wrapper mt-3" style="height:70px;">
+          <canvas baseChart class="chart"
+          [datasets]="lineChart3Data"
+          [labels]="lineChart3Labels"
+          [options]="lineChart3Options"
+          [colors]="lineChart3Colours"
+          [legend]="lineChart3Legend"
+          [chartType]="lineChart3Type"></canvas>
+        </div>-->
+      </div>
+    </div><!--/.col-->
+    <div class="col-sm-6 col-lg-3">
+      <div class="card text-white bg-blue">
+        <div class="card-body pb-0">
+            <div class="kpi-text-value">3.92 %</div>
+            <div>Taux de digitalisation de la relation client  (oDG 5% sur 2018)</div>
+            <div>JUILLET 2018</div>
+          </div>
+        <!--
+        <div class="chart-wrapper mt-3 mx-3" style="height:70px;">
+          <canvas baseChart class="chart"
+          [datasets]="barChart1Data"
+          [labels]="barChart1Labels"
+          [options]="barChart1Options"
+          [colors]="barChart1Colours"
+          [legend]="barChart1Legend"
+          [chartType]="barChart1Type"></canvas>
+        </div>
+        -->
+      </div>
+    </div><!--/.col-->
+  </div><!--/.row-->
+  <div class="card">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-sm-5">
+          <h4 class="card-title mb-0">Evolution part de CA digital (%)</h4>
+          <div class="small text-muted">2018</div>
+        </div><!--/.col-->
+        <!--
+        <div class="col-sm-7 d-none d-md-block">
+          <button type="button" class="btn btn-primary float-right"><i class="icon-cloud-download"></i></button>
+        </div>--><!--/.col-->
+      </div><!--/.row-->
+      <div class="chart-wrapper" style="height:300px;margin-top:40px;">
+        <canvas baseChart class="chart"
+        [datasets]="mainChartData"
+        [labels]="mainChartLabels"
+        [options]="mainChartOptions"
+        [colors]="mainChartColours"
+        [legend]="mainChartLegend"
+        [chartType]="mainChartType"></canvas>
+      </div>
+    </div>
+
+  </div>
+  <!--/.card-->
+  <div class="animated fadeIn">
+    <div class="card-columns cols-2">
+
+      <div class="card">
+        <div class="card-header">
+         Part du CA digital sur la CA opérationnel global ( % ) -->A date
+        </div>
+        <div class="card-body">
+          <div class="chart-wrapper">
+            <canvas baseChart class="chart"
+            [data]="pieChartData"
+            [labels]="pieChartLabels"
+            [chartType]="pieChartType"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          Composition du CA Digital ( % ) -->A date
+        </div>
+        <div class="card-body">
+          <div class="chart-wrapper">
+            <canvas baseChart class="chart"
+            [data]="pieChartData2"
+            [labels]="pieChartLabels2"
+            [colors]=pieChartColors2
+            [chartType]="pieChartType"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)"></canvas>
+          </div>
+        </div>
+      </div>
+
+      </div>
+      </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          Evolution du taux de digitalisation de la relation client (%)
+        </div>
+        <div class="card-body">
+          <div class="chart-wrapper" style="height:300px;margin-top:40px;">
+            <canvas baseChart class="chart"
+            [datasets]="dirChartData"
+            [labels]="mainChartLabels"
+            [options]="dirChartOptions"
+            [colors]="dirChartColours"
+            [legend]="mainChartLegend"
+            [chartType]="mainChartType"></canvas>
+          </div>
+
+        </div>
+      </div>
+    </div><!--/.col-->
+<!--
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          Durée moyenne de transaction (en seconde)
+        </div>
+        <div class="card-body">
+          <div class="chart-wrapper">
+            <canvas baseChart class="chart"
+            [datasets]="barChartData"
+            [labels]="barChartLabels"
+            [options]="barChartOptions"
+            [legend]="barChartLegend"
+            [chartType]="barChartType"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)"></canvas>
+          </div>
+        </div>
+        </div>
+        </div>
+-->
+
+  </div><!--/.row-->
+</div>

@@ -8,12 +8,13 @@ import { P404Component } from './views/error/404.component';
 import { P500Component } from './views/error/500.component';
 import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
-
+import { AuthGuardService as AuthGuard} from './views/auth/auth-gard.service'
 export const routes: Routes = [
   {
     path: '',
     redirectTo: 'dashboard',
     pathMatch: 'full',
+    canActivate: [AuthGuard]
   },
   {
     path: '404',
@@ -46,6 +47,7 @@ export const routes: Routes = [
   {
     path: '',
     component: DefaultLayoutComponent,
+    canActivate: [AuthGuard],
     data: {
       title: 'Home'
     },
@@ -56,11 +58,11 @@ export const routes: Routes = [
       },
       {
         path: 'velocite',
-        loadChildren: './views/velocité/mobile.module#MobileModule'
+        loadChildren: './views/velocite/mobile.module#MobileModule'
       },
       {
         path: 'velocite-details',
-        loadChildren: './views/velocité2/mobile.module#MobileModule'
+        loadChildren: './views/velocite2/mobile.module#MobileModule'
       },
       {
         path: 'omoi',
@@ -150,9 +152,25 @@ export const routes: Routes = [
         path: 'epicare',
         loadChildren: './views/epicare/epicare.module#EpicareModule'
       },
+      {
+        path: 'releasecare',
+        loadChildren: './views/releasecare/releasecare.module#ReleasecareModule'
+      },
+      {
+        path: 'releaseom',
+        loadChildren: './views/releaseom/releaseom.module#ReleaseomModule'
+      },
+      { 
+        path: 'velocitecare',
+        loadChildren: './views/velocitecare/velocitecare.module#VelocitecareModule'
+      },
       { 
         path: 'coutbudgetcare',
         loadChildren: './views/coutbudgetcare/coutbudgetcare.module#CoutbudgetcareModule'
+      },
+      { 
+        path: 'cadigital',
+        loadChildren: './views/cadigital/cadigital.module#CadigitalModule'
       },
     ]
   }

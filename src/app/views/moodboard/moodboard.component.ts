@@ -178,8 +178,8 @@ legend: {
 
 
   ngOnInit(): void {
-    //this.get_products()
-    this.get_products2()
+    this.get_products()
+    //this.get_products2()
     console.log("test date", (new Date(""+this.start_date['date']['year'] + "/"+ this.start_date['date']['month']+"/"+this.start_date['date']['day'])).getTime())
   }
 

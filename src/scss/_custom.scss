@@ -1,1 +1,53 @@
 // Here you can add other styles
+td.border-on{
+    border: 1px solid #c8ced3;
+}
+th.align-center{
+    text-align: center;
+}
+.text-orange{
+    color: #ff6600;
+}
+.text-red{
+    color: #ff0000;
+}
+.bg-blue {
+    background-color: #63c2de !important;
+}
+.card.bg-blue {
+    border-color: #2eadd3;
+}
+.bg-green {
+    background-color: #5EBB83 !important;
+}
+.card.bg-green {
+    border-color: #3D8D5C;
+}
+.bg-orange {
+    background-color: #FF7900 !important;
+}
+.card.bg-orange {
+    border-color: #EC7000;
+}
+.bg-yellow {
+    background-color: #FDD401 !important;
+}
+.card.bg-yellow {
+    border-color: #CDA901;
+}
+.bg-pink {
+background-color: #FA9CDF !important;
+}
+.card.bg-pink {
+    border-color: #F42BBD;
+}
+.bg-purple {
+    background-color: #A885D9 !important;
+}
+.card.bg-purple {
+    border-color: #5F319D;
+}
+.kpi-text-value {
+    font-size: 30px;
+    font-weight: 600;
+}
